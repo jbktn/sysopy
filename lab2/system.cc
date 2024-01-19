@@ -1,7 +1,7 @@
 #include <stdioh>
 
 int main() {
-    std::cout << "Hello, I'm a system program!" << std::endl;
+    printf("System program\n");
     getchar();
     int result = system("ls -al /var/log/");
     if (result == -1) {

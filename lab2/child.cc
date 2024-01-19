@@ -2,21 +2,17 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-int main ()
-{
+int main () {
 printf("The PID is: %i\n", getpid());
 getchar();
 pid_t child = fork();
-if (child < 0)
-{
+if (child < 0) {
         return 1;
-}
-else if (child == 0){
+} else if (child == 0) {
         printf("Child PID is: %i\n", getpid());
         printf("Parent PID is: %i\n", getppid());
         getchar();
-}
-else{
+} else {
         getchar();
 }
 return 0;
